@@ -58,13 +58,31 @@ const Button = ({clickFunction,name}) => {
 }
 
 
-const Statistics = ({text,value}) => {
+const Statistics = ({ text, value }) => {
   
   return (
     <div>
-      {text === "Positive" ? <p>{text}:{value} %</p> : <p>{text}:{value}</p>}
-    </div>
+    <table>
+      <tbody>
+        <thead></thead>
+        {text === "Positive" ? (
+      
+         <tr>
+          <td>{text}</td>
+                <td>{value}%</td>
+                </tr>
+            ) : 
+                <tr>
+          <td>{text}</td>
+                <td>{value} </td>
+                </tr>
+        }
+          
+        </tbody>
+
+  </table>
+        </div>
   )
 }
 
-
+export default App;
